@@ -77,27 +77,6 @@ section {
     padding: 10rem 9%;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Roboto', sans-serif;
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-
-body {
-    background: #e1f4ed;
-    color: black;
-}
-
 .home {
     display: flex;
     align-items: center;
@@ -201,13 +180,6 @@ body {
     background-color: #005f5f;
 }
 
-.home-content {
-    flex: 1;
-    max-width: 600px;
-    padding: 2rem;
-    padding-top: 12rem; 
-}
-
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
@@ -273,13 +245,12 @@ body {
     }
 }
 
-
 .about {
-    position: relative;
     display: flex; 
     align-items: center; 
+    flex-direction: column; 
     margin: 3rem auto; 
-    border: 2px solid#007f73 ; 
+    border: 2px solid #007f73; 
     border-radius: 15px; 
     padding: 2rem;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); 
@@ -288,125 +259,75 @@ body {
 }
 
 .about-content {
-    margin-left: 2rem;
+    margin: 1rem 0; 
     flex: 1; 
+    text-align: center; 
     animation: fadeIn 1s ease;
 }
 
 .about-content h2 {
     font-size: 4.5rem; 
     font-weight: 700;
-    text-align: center; 
+    color: #010101;
+}
+
+.about-content h2 span {
+    color: #007f73; /* Highlighted color for "ME" */
 }
 
 .about-content p {
-    font-size: 1.8rem; 
-    margin-top: 1rem;
+    font-size: 1.6rem; 
+    line-height: 1.8;
+    margin: 1rem 0; 
+    border: 1px solid #1a582f; /* Border for the text content */
+    border-radius: 10px; 
+    padding: 1rem; /* Padding for better spacing */
+    background-color: #c5e3d4; /* Light greenish background */
 }
 
 .about-img {
-    margin-right: 2rem;
+    margin: 1.5rem 0; 
 }
 
 .about-img img {
-    width: 25rem;
-    height: 25rem; 
+    width: 20rem; /* Adjusted image size */
+    height: auto; 
     border-radius: 50%; 
     border: 10px solid #409667; 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1s ease; 
 }
 
-.about-text {
-    border: 1px solid #1a582f; 
-    border-radius: 10px; 
-    padding: 1rem; 
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); 
-    background-color: #c5e3d4;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; 
+        padding: 1.5rem; 
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .about-content h2 {
+        font-size: 3rem; 
+    }
+
+    .about-content p {
+        font-size: 1.4rem; 
+    }
+
+    .about-img img {
+        width: 18rem; /* Slightly reduced size for smaller screens */
     }
 }
-.about {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin: 3rem 0;
-    border: 2px solid #007f73;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 8px 30px #007f73;
-    background-color: #ffffff;
-    max-width: 1200px; 
-    margin-left: auto;
-    margin-right: auto; 
-}
 
-.about-content {
-    margin-left: 2rem;
-    flex: 1;
-    animation: fadeIn 1s ease;
-}
-
-.about-content h2 {
-    font-size: 5rem; 
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 1rem; 
-    color: #010101;
-}
-.heading span {
-    color: #007f73; 
-}
-
-.about-text {
-    max-width: 700px; 
-    margin: 0 auto; 
-    padding: 1.5rem; 
-    border: 1px solid #1a582f; 
-    border-radius: 10px; 
-    background-color: #c5e3d4;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
-    text-align: justify; 
-}
-
-.about-content p {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    margin: 0; 
-}
-
-
-.about-img {
-    margin-right: 2rem;
-}
-
-.about-img img {
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    border: 10px solid #409667;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease;
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 480px) {
+    .about-content h2 {
+        font-size: 2.5rem; 
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .about-content p {
+        font-size: 1.2rem; 
+    }
+
+    .about-img img {
+        width: 15rem; 
     }
 }
 
