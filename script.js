@@ -19,3 +19,5 @@ const typeWriter = () => {
 };
 
 window.onload = typeWriter;
+
+
